@@ -1,124 +1,223 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Java Been</title>
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
 
 body{
     font-family: Hinde, regular;
+    color:#5B2C1E;
+    margin:0;
     text-align:center;
+    background:#D8C58B;
+}
+
+header{
+    background:#D8C58B;
+    text-align:center;
+    padding:32px 0;
+}
+
+header h1{
+    color:#5B2C1E;
+    margin:0 0 8px 0;
+    font-size:36px;
+}
+
+header p{
+    color:#5B2C1E;
+    margin:0;
 }
 
 
-header{
-    background:#d9d9d9;
+/* Logo area */
+
+.logoArea{
+    background:#D8C58B;
+    padding:16px;
     text-align:center;
-    padding:64px 0;
+}
+
+.logoArea img{
+    width:80px;
 }
 
 
 /* Navigation */
 
 nav{
-    background:#333;
-    padding: 8px;
+    background:white;
+    padding:16px;
+    text-align:center;
+    border:2px solid #5B2C1E;
 }
-
 
 #navMenu{
     list-style:none;
-    margin:8px;
-    padding:8px;
+    padding:0;
+    margin:0;
 }
-}
-}
-
 
 #navMenu li{
     display:inline;
-    margin: 32px;
+    margin:16px;
 }
 
-
 #navMenu a{
-    color:white;
+    color:#5B2C1E;
     text-decoration:none;
 }
 
+#navMenu a:hover{
+    text-decoration:underline;
+}
 
-/* Website content */
+
+/* Main content */
 
 .container{
-    max-width:1200px;
-    margin: 96px auto;
     text-align:center;
+    margin:auto;
+    background:white;
 }
 
+
+/* Major topic sections */
 
 section{
-    padding: 32px;
+    padding:48px 24px;
     text-align:center;
 }
 
+h2{
+    color:#5B2C1E;
+    font-size:28px;
+    font-weight:bold;
+    margin:0 0 24px 0;
+}
 
-/* Drink layout */
+p{
+    color:#5B2C1E;
+}
+
+
+/* Coffee and Creativity paragraph */
+
+section:first-child p{
+    max-width:500px;
+    margin:0 auto;
+    line-height:1.5;
+}
+
+
+/* Drinks */
 
 .row{
-    justify-content:center;
     display:flex;
-    gap:32px;
+    justify-content:center;
+    align-items:start;
+    gap:24px;
 }
 
+.col-md-6{
+    width:200px;
+    text-align:center;
+}
 
 .imageBox{
-    background:#e5e5e5;
     height:120px;
-    margin-bottom:24px;
+    margin-bottom:8px;
     text-align:center;
 }
 
+.imageBox img{
+    height:120px;
+    width:120px;
+    object-fit:contain;
+}
+
+.col-md-6 p{
+    margin:8px 0 0 0;
+}
+
+
+/* About */
+
+#aboutText{
+    max-width:500px;
+    margin:24px auto 0 auto;
+    line-height:1.5;
+}
+
+
+/* Contact */
+
+#contactForm{
+    max-width:400px;
+    margin:24px auto 0 auto;
+}
+
+#contactForm input,
+#contactForm textarea{
+    padding:8px;
+    margin:8px 0;
+}
+
+#contactForm textarea{
+    height:80px;
+}
+
+
+/* Footer */
 
 footer{
-    background:#d9d9d9;
+    background:#D8C58B;
     text-align:center;
-    padding:20px;
+    padding:24px;
+}
+
+footer p{
+    margin:0;
 }
 
 
+/* Mobile */
 
-/* Mobile layout */
 @media screen and (max-width:768px){
+
+    section{
+        padding:40px 16px;
+    }
+
+    h2{
+        font-size:26px;
+    }
 
     .row{
         display:block;
     }
 
-    .col-md-3{
+    .col-md-6{
         width:100%;
-        margin-bottom:8px;
+        margin-bottom:24px;
     }
 
     #navMenu li{
-        display:block;
-        margin:15px;
+        margin:8px;
     }
 
 }
-
 
 </style>
 
 </head>
 
-
 <body>
-
-
 
 <header id="home">
 
@@ -128,196 +227,139 @@ footer{
 
 </header>
 
+<!-- Logo -->
 
+<div class="logoArea">
 
+<img src="logo java.png" alt="Java Been Logo">
+
+</div>
+
+<!-- Navigation -->
 
 <nav>
 
 <ul id="navMenu">
 
-<li><a href="#home">Home</a></li>
+<li>
+<a href="#home">Home</a>
+</li>
 
-<li><a href="#drinks">Featured Drinks</a></li>
+<li>
+<a href="#drinks">Featured Drinks</a>
+</li>
 
-<li><a href="#about">About</a></li>
+<li>
+<a href="#about">About</a>
+</li>
 
-<li><a href="#contact">Contact</a></li>
+<li>
+<a href="#contact">Contact</a>
+</li>
 
 </ul>
 
 </nav>
 
-
-
-
 <div class="container">
-
-
 
 <section>
 
 <h2>Coffee and Creativity</h2>
 
 <p>
-Throughout the day, self-employed and remote workers enjoy a focused space away from home to get in a few productive
-hours. At night, the space comes alive with artists, student study groups, and everyday people just looking to enjoy a
-cultured night on the town.
+Throughout the day, self-employed and remote workers enjoy a focused space away from home to get in a few productive hours. At night, the space comes alive with artists, student study groups, and everyday people just looking to enjoy a cultured night on the town. to enjoy coffee and community.
 </p>
 
 </section>
-
-
-
-
-
 
 <section id="drinks">
 
 <h2>Featured Drinks</h2>
 
+<div class="row">
 
-<div class="row justify-content-center">
+<div class="col-md-6">
 
+<div class="imageBox">
 
+<img src="matcha.png" alt="Signature Matcha">
 
-<div class="col-md-3">
-
-<div class="imageBox"></div>
+</div>
 
 <p>Signature Matcha</p>
 
 </div>
 
+<div class="col-md-6">
 
+<div class="imageBox">
 
-
-<div class="col-md-3">
-
-<div class="imageBox"></div>
-
-<p>Classic Americano</p>
+<img src="latte.png" alt="Classic Latte">
 
 </div>
 
+<p>Classic Latte</p>
 
+</div>
 
 </div>
 
 </section>
-
-
-
-
-
-
 
 <section id="about">
 
-
 <h2>About Java Been</h2>
 
-
 <button id="aboutButton" class="btn btn-secondary">
-
 Show About
-
 </button>
 
+<p id="aboutText" style="display:none;">
 
-
-<p id="aboutText" style="display:none; margin-top:15px;">
-
-
-Throughout the day, self employed and remote workers enjoy a focused space away from home to get in a few productive
-hours. At night, the space comes alive with artists, student study groups, and everyday people just looking to enjoy a
-cultured night on the town.
-
+Throughout the day, self employed and remote workers enjoy a focused space away from home to get in a few productive hours. At night, the space comes alive with artists, student study groups, and everyday people just looking to enjoy a cultured night on the town.
 
 </p>
 
-
-
-
 </section>
-
-
-
-
-
-
 
 <section id="contact">
 
+<h2>Contact</h2>
 
-<h2>Contact Java Been</h2>
-
+<p>Email: JavaBeen@email.com</p>
 
 <form id="contactForm">
 
-
 <label>Name:</label>
 
+<input type="text" id="name">
+
 <br>
-
-<input type="text" id="name" required>
-
-
-<br><br>
-
-
 
 <label>Email:</label>
 
+<input type="email" id="email">
+
 <br>
-
-<input type="email" id="email" required>
-
-
-<br><br>
-
-
 
 <label>Message:</label>
 
+<textarea id="message"></textarea>
+
 <br>
 
-<textarea id="message" required></textarea>
-
-
-<br><br>
-
-
-
-<button type="submit">
-
+<button type="submit" class="btn btn-secondary">
 Send Message
-
 </button>
-
-
 
 </form>
 
-
-
 <p id="response"></p>
-
-
 
 </section>
 
-
-
-
-
-
 </div>
-
-
-
-
-
-
 
 <footer>
 
@@ -325,101 +367,58 @@ Send Message
 
 </footer>
 
-
-
-
-
-
 <!-- jQuery -->
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-
-
-
-<!-- jQuery Function -->
-
 <script>
-
 
 $(document).ready(function(){
 
+    $("#aboutButton").click(function(){
 
-$("#aboutButton").click(function(){
+        $("#aboutText").toggle();
 
+        if($("#aboutText").is(":visible")){
 
-$("#aboutText").toggle();
+            $("#aboutButton").text("Hide About");
 
+        }else{
 
+            $("#aboutButton").text("Show About");
 
-if($("#aboutText").is(":visible")){
+        }
 
-
-$("#aboutButton").text("Hide About");
-
-
-}
-
-else{
-
-
-$("#aboutButton").text("Show About");
-
-
-}
-
+    });
 
 });
-
-
-});
-
-
-</script>
-
-
-
-
-
-
-<!-- JavaScript Form Validation -->
-
-<script language="javascript" type="text/javascript">
 
 
 document.getElementById("contactForm").addEventListener("submit", function(event){
 
+    event.preventDefault();
 
-event.preventDefault();
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
 
+    if(name == "" || email == "" || message == ""){
 
+        document.getElementById("response").innerHTML =
+        "Please fill out all fields.";
 
-var name = document.getElementById("name").value;
+    }else{
 
-var email = document.getElementById("email").value;
+        document.getElementById("response").innerHTML =
+        "Thank you for contacting Java Been!";
 
-var message = document.getElementById("message").value;
+    }
 
-
-
-
-if(name == "" || email == "" || message == ""){
-
-
-document.getElementById("response").innerHTML =
-"Please fill out all fields.";
-
-
-}
 });
 
-
-
 </script>
-
-
-
 
 </body>
 
 </html>
+
