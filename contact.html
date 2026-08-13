@@ -3,15 +3,13 @@
 
 <head>
 
-    <title>Java Been - Contact</title>
+<title>Java Been - Contact</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -19,21 +17,40 @@
 <body>
 
 
+<!-- NAVIGATION -->
+
+<nav>
+
+<button id="menuButton">☰ Menu</button>
+
+<ul id="navMenu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="drinks.html">Featured Drinks</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
 <!-- HEADER -->
 
 <header>
 
-    <img src="header guy.png" class="headerGuyLeft" alt="Java Been character">
+<img src="header guy.png" class="headerGuyRight" alt="Java Been character">
 
-    <img src="header guy.png" class="headerGuyRight" alt="Java Been character">
+<div class="headerText">
 
-    <div class="headerText">
+<h1>JAVA BEEN</h1>
 
-        <h1>JAVA BEEN</h1>
+<p>Coffee Community Creativity</p>
 
-        <p>Coffee Community Creativity</p>
-
-    </div>
+</div>
 
 </header>
 
@@ -42,87 +59,70 @@
 
 <div class="logoArea">
 
-    <img src="logo java.png" alt="Java Been Logo">
+<img src="logo java.png" alt="Java Been Logo">
 
 </div>
 
 
-<!-- NAVIGATION -->
-
-<nav>
-
-    <button id="menuButton">☰ Menu</button>
-
-    <ul id="navMenu">
-
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="drinks.html">Featured Drinks</a></li>
-
-        <li><a href="about.html">About</a></li>
-
-        <li><a href="contact.html">Contact</a></li>
-
-    </ul>
-
-</nav>
-
-
-<!-- CONTACT CONTENT -->
+<!-- CONTACT -->
 
 <main>
 
-    <section class="contactSection">
+<section>
 
-        <div class="contactContent">
+<div class="content">
 
-
-            <div class="contactText">
-
-                <h2>Contact Java Been</h2>
-
-                <p>Email: JavaBeen@email.com</p>
-
-                <p>Phone: (123) 456-7891</p>
+<div class="contactContent">
 
 
-                <form id="contactForm">
+<div class="contactText">
 
-                    <label>Name:</label>
+<h2>Contact Java Been</h2>
 
-                    <input type="text" id="name">
+<p>Email: JavaBeen@email.com</p>
 
-
-                    <label>Email:</label>
-
-                    <input type="email" id="email">
+<p>Phone: (123) 456-7891</p>
 
 
-                    <label>Message:</label>
+<form id="contactForm">
 
-                    <textarea id="message"></textarea>
+<label>Name:</label>
 
-
-                    <button type="submit">Send Message</button>
-
-                </form>
+<input type="text" id="name">
 
 
-                <p id="response"></p>
+<label>Email:</label>
 
-            </div>
-
-
-            <div class="contactImage">
-
-                <img src="contact us.png" alt="Contact Java Been">
-
-            </div>
+<input type="email" id="email">
 
 
-        </div>
+<label>Message:</label>
 
-    </section>
+<textarea id="message"></textarea>
+
+
+<button type="submit">Send Message</button>
+
+</form>
+
+
+<p id="response"></p>
+
+</div>
+
+
+<div class="contactImage">
+
+<img src="contact us.png" alt="Contact Java Been">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
 
 </main>
 
@@ -131,53 +131,52 @@
 
 <div class="bottomHeader">
 
-    <h2>JAVA BEEN</h2>
+<h2>JAVA BEEN</h2>
 
-    <img src="logo java.png" alt="Java Been Logo">
+<img src="logo java.png" alt="Java Been Logo">
 
 </div>
 
 
-<!-- jQuery -->
+<!-- JQUERY -->
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
 
 <script>
 
 $(document).ready(function(){
 
-    $("#menuButton").click(function(){
+$("#menuButton").click(function(){
 
-        $("#navMenu").slideToggle();
+$("#navMenu").slideToggle();
 
-    });
-
-
-    $("#contactForm").submit(function(event){
-
-        event.preventDefault();
-
-        var name = $("#name").val();
-
-        var email = $("#email").val();
-
-        var message = $("#message").val();
+});
 
 
-        if(name == "" || email == "" || message == ""){
+$("#contactForm").submit(function(event){
 
-            $("#response").text("Please fill out all fields.");
+event.preventDefault();
 
-        }
+var name = $("#name").val();
 
-        else{
+var email = $("#email").val();
 
-            $("#response").text("Thank you for contacting Java Been!");
+var message = $("#message").val();
 
-        }
 
-    });
+if(name == "" || email == "" || message == ""){
+
+$("#response").text("Please fill out all fields.");
+
+}
+
+else{
+
+$("#response").text("Thank you for contacting Java Been!");
+
+}
+
+});
 
 });
 
