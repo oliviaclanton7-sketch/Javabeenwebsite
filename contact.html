@@ -1,48 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-<title>Contact - Java Been</title>
+
+<title>Java Been - Contact</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 
 body{
     font-family:Hinde, regular;
     margin:0;
-    text-align:center;
-    background:#D8C58B;
-    color:#5B2C1E;
+    background:#B8A58A;
+    color:#56372C;
 }
 
 header{
-    background:#D8C58B;
-    padding:32px 0;
+    background:#F5F0E6;
+    padding:12px 0 0 0;
+    position:relative;
+    min-height:220px;
+    text-align:center;
 }
 
 header h1{
-    margin:0 0 8px 0;
-    color:#5B2C1E;
-    font-size:36px;
+    margin:0;
+    color:#56372C;
+    font-size:76px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
 header p{
-    margin:0;
+    margin:2px 0 0 0;
+    color:#56372C;
+    font-size:21px;
+}
+
+.headerGuyLeft{
+    position:absolute;
+    left:20px;
+    bottom:0;
+    width:175px;
+}
+
+.headerGuyRight{
+    position:absolute;
+    right:20px;
+    bottom:0;
+    width:175px;
 }
 
 .logoArea{
-    background:#D8C58B;
-    padding:16px;
+    background:#F5F0E6;
+    padding:0 0 8px 0;
 }
 
 .logoArea img{
-    width:80px;
+    width:190px;
+    max-width:60%;
+    display:block;
+    margin:auto;
 }
 
 nav{
-    background:white;
-    border:2px solid #5B2C1E;
-    padding:16px;
+    background:#F5F0E6;
+    border:2px solid #56372C;
+    padding:14px;
 }
 
 #navMenu{
@@ -53,64 +78,161 @@ nav{
 
 #navMenu li{
     display:inline;
-    margin:16px;
+    margin:20px;
 }
 
 #navMenu a{
-    color:#5B2C1E;
+    color:#56372C;
     text-decoration:none;
+    font-size:17px;
 }
 
-.container{
-    background:white;
+#menuButton{
+    background:#F5F0E6;
+    color:#56372C;
+    border:1px solid #56372C;
+    padding:8px 16px;
 }
 
 section{
-    padding:48px 24px;
+    padding:64px 24px;
 }
 
 h2{
-    color:#5B2C1E;
-    font-size:28px;
-    margin:0 0 24px 0;
+    color:#56372C;
+    font-size:38px;
+    margin-bottom:32px;
 }
 
-form{
-    max-width:400px;
+p{
+    color:#56372C;
+    line-height:1.6;
+}
+
+.contactImage{
+    width:400px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto;
+}
+
+#contactForm{
+    max-width:500px;
     margin:24px auto 0 auto;
 }
 
-input,
-textarea{
+#contactForm input,
+#contactForm textarea{
     width:100%;
     padding:8px;
-    margin:8px 0;
-    box-sizing:border-box;
+    margin-top:4px;
+    border:1px solid #56372C;
+    background:#F5F0E6;
 }
 
-textarea{
-    height:80px;
+#contactForm textarea{
+    height:120px;
 }
 
-button{
-    padding:8px 16px;
-    color:#5B2C1E;
+#contactForm button{
+    background:#56372C;
+    color:white;
+    border:0;
+    padding:10px 20px;
+    margin-top:12px;
 }
 
-footer{
-    background:#D8C58B;
-    padding:24px;
+#response{
+    margin-top:16px;
 }
 
-footer p{
-    margin:0;
+.bottomHeader{
+    background:#F5F0E6;
+    border-top:2px solid #56372C;
+    padding:16px 0 12px 0;
+    text-align:center;
 }
 
-@media screen and (max-width:768px){
+.bottomHeader h2{
+    margin:0 0 3px 0;
+    font-size:20px;
+}
+
+.bottomHeader img{
+    width:85px;
+    max-width:50%;
+}
+
+@media (max-width:768px){
+
+    header{
+        min-height:190px;
+    }
+
+    header h1{
+        font-size:48px;
+    }
+
+    header p{
+        font-size:17px;
+    }
+
+    .headerGuyLeft,
+    .headerGuyRight{
+        width:110px;
+    }
+
+    .headerGuyLeft{
+        left:0;
+    }
+
+    .headerGuyRight{
+        right:0;
+    }
+
+    .logoArea img{
+        width:160px;
+    }
+
+    #navMenu{
+        display:none;
+    }
 
     #navMenu li{
         display:block;
         margin:8px;
+    }
+
+    section{
+        padding:48px 20px;
+    }
+
+    .contactImage{
+        width:100%;
+        max-width:400px;
+        margin-bottom:32px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    header h1{
+        font-size:38px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .headerGuyLeft,
+    .headerGuyRight{
+        width:85px;
+    }
+
+    .logoArea img{
+        width:130px;
     }
 
 }
@@ -122,6 +244,10 @@ footer p{
 <body>
 
 <header>
+
+<img src="header guy.png" class="headerGuyLeft" alt="Java Been character">
+
+<img src="header guy.png" class="headerGuyRight" alt="Java Been character">
 
 <h1>JAVA BEEN</h1>
 
@@ -137,6 +263,10 @@ footer p{
 
 <nav>
 
+<div class="container-fluid text-center">
+
+<button id="menuButton">☰ Menu</button>
+
 <ul id="navMenu">
 
 <li><a href="index.html">Home</a></li>
@@ -149,15 +279,29 @@ footer p{
 
 </ul>
 
+</div>
+
 </nav>
 
 <div class="container">
 
 <section>
 
-<h2>Contact</h2>
+<div class="row align-items-center justify-content-center">
+
+<div class="col-md-6">
+
+<h2>Contact Java Been</h2>
+
+<img src="contact us.png" class="contactImage" alt="Contact Java Been">
+
+</div>
+
+<div class="col-md-6">
 
 <p>Email: JavaBeen@email.com</p>
+
+<p>Phone: (123) 456-7891</p>
 
 <form id="contactForm">
 
@@ -173,29 +317,40 @@ footer p{
 
 <textarea id="message"></textarea>
 
-<button type="submit">
-Send Message
-</button>
+<button type="submit">Send Message</button>
+
+</form>
 
 <p id="response"></p>
 
-</form>
+</div>
+
+</div>
 
 </section>
 
 </div>
 
-<footer>
+<div class="bottomHeader">
 
-<p>Java Been</p>
+<h2>JAVA BEEN</h2>
 
-</footer>
+<img src="logo java.png" alt="Java Been Logo">
+
+</div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <script>
 
 $(document).ready(function(){
+
+    $("#menuButton").click(function(){
+
+        $("#navMenu").slideToggle();
+
+    });
+
 
     $("#contactForm").submit(function(event){
 
@@ -209,7 +364,9 @@ $(document).ready(function(){
 
             $("#response").text("Please fill out all fields.");
 
-        }else{
+        }
+
+        else{
 
             $("#response").text("Thank you for contacting Java Been!");
 
