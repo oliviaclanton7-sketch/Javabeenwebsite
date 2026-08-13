@@ -5,290 +5,11 @@
 
 <title>Java Been - Featured Drinks</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-
-*{
-    box-sizing:border-box;
-}
-
-html, body{
-    margin:0;
-    padding:0;
-    width:100%;
-}
-
-body{
-    font-family:Hinde, Arial, sans-serif;
-    background:#B8A58A;
-    color:#56372C;
-}
-
-
-/* HEADER */
-
-header{
-    background:#F5F0E6;
-    text-align:center;
-    position:relative;
-    padding:12px 0 0 0;
-}
-
-header h1{
-    color:#56372C;
-    font-size:72px;
-    margin:0;
-    font-weight:bold;
-}
-
-header p{
-    color:#56372C;
-    font-size:20px;
-    margin:0 0 8px 0;
-}
-
-
-/* HEADER PEOPLE */
-
-.headerGuyLeft{
-    position:absolute;
-    left:15px;
-    bottom:0;
-    width:160px;
-}
-
-.headerGuyRight{
-    position:absolute;
-    right:15px;
-    bottom:0;
-    width:160px;
-}
-
-
-/* LOGO */
-
-.logoArea{
-    background:#F5F0E6;
-    text-align:center;
-    padding:0 0 8px 0;
-}
-
-.logoArea img{
-    width:180px;
-    max-width:50%;
-}
-
-
-/* NAVIGATION */
-
-nav{
-    background:#F5F0E6;
-    border:2px solid #56372C;
-    text-align:center;
-    padding:12px;
-}
-
-#menuButton{
-    background:#F5F0E6;
-    color:#56372C;
-    border:1px solid #56372C;
-    padding:7px 16px;
-}
-
-#navMenu{
-    list-style:none;
-    padding:0;
-    margin:10px 0 0 0;
-}
-
-#navMenu li{
-    display:inline;
-    margin:0 16px;
-}
-
-#navMenu a{
-    color:#56372C;
-    text-decoration:none;
-    font-size:17px;
-}
-
-
-/* PAGE */
-
-section{
-    padding:45px 20px;
-    text-align:center;
-}
-
-h2{
-    color:#56372C;
-    font-size:36px;
-    margin-bottom:28px;
-}
-
-p{
-    color:#56372C;
-    line-height:1.5;
-}
-
-
-/* DRINKS */
-
-.drink{
-    padding:12px;
-}
-
-.drinkImage{
-    display:block;
-    width:300px;
-    max-width:100%;
-    height:auto;
-    margin:0 auto 12px auto;
-}
-
-
-/* BOTTOM */
-
-.bottomHeader{
-    background:#F5F0E6;
-    border-top:2px solid #56372C;
-    text-align:center;
-    padding:12px 0;
-}
-
-.bottomHeader h2{
-    font-size:20px;
-    margin:0;
-}
-
-.bottomHeader img{
-    width:70px;
-}
-
-
-/* MOBILE */
-
-@media screen and (max-width:768px){
-
-    header{
-        padding-top:8px;
-    }
-
-    header h1{
-        font-size:42px;
-        position:relative;
-        z-index:2;
-    }
-
-    header p{
-        font-size:15px;
-        position:relative;
-        z-index:2;
-    }
-
-    .headerGuyLeft,
-    .headerGuyRight{
-        width:90px;
-    }
-
-    .headerGuyLeft{
-        left:0;
-    }
-
-    .headerGuyRight{
-        right:0;
-    }
-
-    .logoArea{
-        padding:5px 0 8px 0;
-    }
-
-    .logoArea img{
-        width:125px;
-        max-width:45%;
-    }
-
-    nav{
-        padding:8px;
-    }
-
-    #navMenu{
-        display:none;
-        margin:8px 0 0 0;
-    }
-
-    #navMenu li{
-        display:block;
-        margin:7px 0;
-    }
-
-    #navMenu a{
-        font-size:16px;
-    }
-
-    section{
-        padding:28px 16px;
-    }
-
-    h2{
-        font-size:30px;
-        margin-bottom:18px;
-    }
-
-    .drink{
-        padding:8px;
-        margin-bottom:18px;
-    }
-
-    .drinkImage{
-        width:100%;
-        max-width:280px;
-    }
-
-    .bottomHeader{
-        padding:10px 0;
-    }
-
-    .bottomHeader h2{
-        font-size:18px;
-    }
-
-    .bottomHeader img{
-        width:60px;
-    }
-
-}
-
-
-/* SMALL PHONES */
-
-@media screen and (max-width:480px){
-
-    header h1{
-        font-size:36px;
-    }
-
-    header p{
-        font-size:14px;
-    }
-
-    .headerGuyLeft,
-    .headerGuyRight{
-        width:78px;
-    }
-
-    section{
-        padding:24px 14px;
-    }
-
-    h2{
-        font-size:27px;
-    }
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -335,9 +56,11 @@ p{
 </nav>
 
 
-<div class="container">
+<main>
 
 <section>
+
+<div class="content">
 
 <h2>Featured Drinks</h2>
 
@@ -362,9 +85,11 @@ p{
 
 </div>
 
+</div>
+
 </section>
 
-</div>
+</main>
 
 
 <div class="bottomHeader">
