@@ -9,12 +9,23 @@
 
 <style>
 
+html,
+body{
+    width:100%;
+    min-height:100%;
+    margin:0;
+    padding:0;
+}
+
 body{
     font-family:Hinde, regular;
-    margin:0;
     background:#B8A58A;
     color:#56372C;
+    overflow-x:hidden;
 }
+
+
+/* HEADER */
 
 header{
     background:#F5F0E6;
@@ -52,6 +63,9 @@ header p{
     width:175px;
 }
 
+
+/* LOGO */
+
 .logoArea{
     background:#F5F0E6;
     padding:0 0 8px 0;
@@ -63,6 +77,9 @@ header p{
     display:block;
     margin:auto;
 }
+
+
+/* NAVIGATION */
 
 nav{
     background:#F5F0E6;
@@ -94,6 +111,9 @@ nav{
     padding:8px 16px;
 }
 
+
+/* CONTENT */
+
 section{
     padding:64px 24px;
 }
@@ -109,6 +129,9 @@ p{
     line-height:1.6;
 }
 
+
+/* CONTACT IMAGE */
+
 .contactImage{
     width:400px;
     max-width:100%;
@@ -116,6 +139,9 @@ p{
     display:block;
     margin:0 auto;
 }
+
+
+/* CONTACT FORM */
 
 #contactForm{
     max-width:500px;
@@ -143,9 +169,8 @@ p{
     margin-top:12px;
 }
 
-#response{
-    margin-top:16px;
-}
+
+/* BOTTOM */
 
 .bottomHeader{
     background:#F5F0E6;
@@ -164,23 +189,40 @@ p{
     max-width:50%;
 }
 
+
+/* MOBILE */
+
 @media (max-width:768px){
 
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
     header{
-        min-height:190px;
+        min-height:150px;
+        height:auto;
+        padding:10px 10px 0 10px;
     }
 
     header h1{
-        font-size:48px;
+        font-size:44px;
+        margin:0;
+        position:relative;
+        z-index:2;
     }
 
     header p{
-        font-size:17px;
+        font-size:16px;
+        margin:4px 0 8px 0;
+        position:relative;
+        z-index:2;
     }
 
     .headerGuyLeft,
     .headerGuyRight{
-        width:110px;
+        width:95px;
+        bottom:0;
     }
 
     .headerGuyLeft{
@@ -191,30 +233,74 @@ p{
         right:0;
     }
 
+    .logoArea{
+        padding:4px 0 8px 0;
+    }
+
     .logoArea img{
-        width:160px;
+        width:130px;
+        max-width:45%;
+    }
+
+    nav{
+        padding:10px;
     }
 
     #navMenu{
         display:none;
+        margin-top:8px;
     }
 
     #navMenu li{
         display:block;
-        margin:8px;
+        margin:8px 0;
+    }
+
+    #navMenu a{
+        font-size:16px;
     }
 
     section{
-        padding:48px 20px;
+        padding:32px 18px;
+    }
+
+    h2{
+        font-size:30px;
+        margin-bottom:20px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:1.5;
     }
 
     .contactImage{
         width:100%;
-        max-width:400px;
-        margin-bottom:32px;
+        max-width:320px;
+        margin:10px auto 24px auto;
+    }
+
+    #contactForm{
+        width:100%;
+        margin:20px auto 0 auto;
+    }
+
+    .bottomHeader{
+        padding:12px 0 10px 0;
+    }
+
+    .bottomHeader h2{
+        font-size:18px;
+    }
+
+    .bottomHeader img{
+        width:70px;
     }
 
 }
+
+
+/* SMALL PHONES */
 
 @media (max-width:480px){
 
@@ -235,13 +321,19 @@ p{
         width:130px;
     }
 
+    .contactImage{
+        max-width:290px;
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -255,11 +347,13 @@ p{
 
 </header>
 
+
 <div class="logoArea">
 
 <img src="logo java.png" alt="Java Been Logo">
 
 </div>
+
 
 <nav>
 
@@ -283,6 +377,7 @@ p{
 
 </nav>
 
+
 <div class="container">
 
 <section>
@@ -296,6 +391,7 @@ p{
 <img src="contact us.png" class="contactImage" alt="Contact Java Been">
 
 </div>
+
 
 <div class="col-md-6">
 
@@ -331,6 +427,7 @@ p{
 
 </div>
 
+
 <div class="bottomHeader">
 
 <h2>JAVA BEEN</h2>
@@ -338,6 +435,7 @@ p{
 <img src="logo java.png" alt="Java Been Logo">
 
 </div>
+
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -377,6 +475,7 @@ $(document).ready(function(){
 });
 
 </script>
+
 
 </body>
 
