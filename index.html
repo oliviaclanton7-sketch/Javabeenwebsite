@@ -9,61 +9,60 @@
 
 <style>
 
-html,
-body{
-    width:100%;
-    min-height:100%;
+*{
+    box-sizing:border-box;
+}
+
+html, body{
     margin:0;
     padding:0;
+    width:100%;
 }
 
 body{
-    font-family:Hinde, regular;
+    font-family:Hinde, Arial, sans-serif;
     background:#B8A58A;
     color:#56372C;
-    overflow-x:hidden;
 }
 
 
-/* TOP HEADER */
+/* HEADER */
 
 header{
     background:#F5F0E6;
-    padding:12px 0 0 0;
-    position:relative;
-    min-height:220px;
     text-align:center;
+    position:relative;
+    padding:12px 0 0 0;
 }
 
 header h1{
-    margin:0;
     color:#56372C;
-    font-size:76px;
+    font-size:72px;
+    margin:0;
     font-weight:bold;
-    letter-spacing:2px;
 }
 
 header p{
-    margin:2px 0 0 0;
     color:#56372C;
-    font-size:21px;
+    font-size:20px;
+    margin:0 0 8px 0;
 }
 
 
-/* HEADER CHARACTERS */
+/* HEADER PEOPLE */
 
 .headerGuyLeft{
     position:absolute;
-    left:20px;
+    left:15px;
     bottom:0;
-    width:175px;
+    width:160px;
 }
 
 .headerGuyRight{
     position:absolute;
-    right:20px;
+    right:15px;
     bottom:0;
-    width:175px;
+    width:160px;
 }
 
 
@@ -71,14 +70,13 @@ header p{
 
 .logoArea{
     background:#F5F0E6;
+    text-align:center;
     padding:0 0 8px 0;
 }
 
 .logoArea img{
-    width:190px;
-    max-width:60%;
-    display:block;
-    margin:auto;
+    width:180px;
+    max-width:50%;
 }
 
 
@@ -87,18 +85,26 @@ header p{
 nav{
     background:#F5F0E6;
     border:2px solid #56372C;
-    padding:14px;
+    text-align:center;
+    padding:12px;
+}
+
+#menuButton{
+    background:#F5F0E6;
+    color:#56372C;
+    border:1px solid #56372C;
+    padding:7px 16px;
 }
 
 #navMenu{
     list-style:none;
     padding:0;
-    margin:0;
+    margin:10px 0 0 0;
 }
 
 #navMenu li{
     display:inline;
-    margin:20px;
+    margin:0 16px;
 }
 
 #navMenu a{
@@ -107,107 +113,82 @@ nav{
     font-size:17px;
 }
 
-#navMenu a:hover{
-    text-decoration:underline;
-}
 
-#menuButton{
-    background:#F5F0E6;
-    color:#56372C;
-    border:1px solid #56372C;
-    padding:8px 16px;
-}
-
-
-/* MAIN CONTENT */
+/* PAGE */
 
 .container{
-    background:#B8A58A;
+    width:100%;
 }
 
 section{
-    padding:64px 24px;
+    padding:45px 20px;
 }
 
 h2{
     color:#56372C;
     font-size:36px;
-    margin-bottom:32px;
+    margin-bottom:24px;
 }
 
 p{
     color:#56372C;
-    line-height:1.6;
+    line-height:1.5;
 }
 
 
 /* HOME IMAGE */
 
 .homeImage{
-    width:450px;
+    display:block;
+    width:400px;
     max-width:100%;
     height:auto;
-    display:block;
-    margin:0 auto;
+    margin:20px auto;
 }
 
 
-/* BOTTOM HEADER */
+/* BOTTOM */
 
 .bottomHeader{
     background:#F5F0E6;
     border-top:2px solid #56372C;
-    padding:16px 0 12px 0;
     text-align:center;
+    padding:12px 0;
 }
 
 .bottomHeader h2{
-    color:#56372C;
-    margin:0 0 3px 0;
     font-size:20px;
+    margin:0;
 }
 
 .bottomHeader img{
-    width:85px;
-    max-width:50%;
-    display:block;
-    margin:0 auto;
+    width:70px;
 }
 
 
 /* MOBILE */
 
-@media (max-width:768px){
-
-    body{
-        width:100%;
-        overflow-x:hidden;
-    }
+@media screen and (max-width:768px){
 
     header{
-        min-height:150px;
-        height:auto;
-        padding:10px 10px 0 10px;
+        padding-top:8px;
     }
 
     header h1{
-        font-size:44px;
-        margin:0;
+        font-size:42px;
         position:relative;
         z-index:2;
     }
 
     header p{
-        font-size:16px;
-        margin:4px 0 8px 0;
+        font-size:15px;
         position:relative;
         z-index:2;
     }
 
     .headerGuyLeft,
     .headerGuyRight{
-        width:95px;
-        bottom:0;
+        width:90px;
     }
 
     .headerGuyLeft{
@@ -219,26 +200,26 @@ p{
     }
 
     .logoArea{
-        padding:4px 0 8px 0;
+        padding:5px 0 8px 0;
     }
 
     .logoArea img{
-        width:130px;
+        width:125px;
         max-width:45%;
     }
 
     nav{
-        padding:10px;
+        padding:8px;
     }
 
     #navMenu{
         display:none;
-        margin-top:8px;
+        margin:8px 0 0 0;
     }
 
     #navMenu li{
         display:block;
-        margin:8px 0;
+        margin:7px 0;
     }
 
     #navMenu a{
@@ -246,43 +227,36 @@ p{
     }
 
     section{
-        padding:32px 18px;
+        padding:28px 16px;
     }
 
     h2{
         font-size:30px;
-        margin-bottom:20px;
+        margin-bottom:18px;
     }
 
     p{
         font-size:16px;
         line-height:1.5;
-    }
-
-    .col-md-6,
-    .col-md-7,
-    .col-md-5{
-        width:100%;
+        margin-bottom:12px;
     }
 
     .homeImage{
         width:100%;
-        max-width:350px;
-        height:auto;
-        margin:20px auto 0 auto;
+        max-width:320px;
+        margin:18px auto 0 auto;
     }
 
     .bottomHeader{
-        padding:12px 0 10px 0;
+        padding:10px 0;
     }
 
     .bottomHeader h2{
         font-size:18px;
-        margin-bottom:3px;
     }
 
     .bottomHeader img{
-        width:70px;
+        width:60px;
     }
 
 }
@@ -290,11 +264,136 @@ p{
 
 /* SMALL PHONES */
 
-@media (max-width:480px){
+@media screen and (max-width:480px){
 
     header h1{
-        font-size:38px;
+        font-size:36px;
     }
+
+    header p{
+        font-size:14px;
+    }
+
+    .headerGuyLeft,
+    .headerGuyRight{
+        width:78px;
+    }
+
+    section{
+        padding:24px 14px;
+    }
+
+    h2{
+        font-size:27px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<img src="header guy.png" class="headerGuyLeft" alt="Java Been character">
+
+<img src="header guy.png" class="headerGuyRight" alt="Java Been character">
+
+<h1>JAVA BEEN</h1>
+
+<p>Coffee Community Creativity</p>
+
+</header>
+
+
+<div class="logoArea">
+
+<img src="logo java.png" alt="Java Been Logo">
+
+</div>
+
+
+<nav>
+
+<button id="menuButton">☰ Menu</button>
+
+<ul id="navMenu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="drinks.html">Featured Drinks</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<div class="container">
+
+<section>
+
+<div class="row align-items-center">
+
+<div class="col-md-6">
+
+<h2>Coffee and Creativity</h2>
+
+<p>
+Throughout the day, self-employed and remote workers enjoy a focused space away from home to get in a few productive hours. At night, the space comes alive with artists, student study groups, and everyday people just looking to enjoy a cultured night on the town. to enjoy coffee and community.
+</p>
+
+</div>
+
+<div class="col-md-6">
+
+<img src="surf.png" class="homeImage" alt="Surf">
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<div class="bottomHeader">
+
+<h2>JAVA BEEN</h2>
+
+<img src="logo java.png" alt="Java Been Logo">
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#menuButton").click(function(){
+
+        $("#navMenu").slideToggle();
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>
 
     header p{
         font-size:15px;
