@@ -6,16 +6,14 @@
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
     background: #B8A58A;
     color: #F5F0E6;
     font-family: Arial, sans-serif;
@@ -39,8 +37,8 @@ nav {
     background: #F5F0E6;
     color: #56372C;
     border: 1px solid #56372C;
-    padding: 7px 18px;
-    font-size: 18px;
+    padding: 7px 20px;
+    font-size: 19px;
     cursor: pointer;
 }
 
@@ -58,7 +56,7 @@ nav {
 #navMenu a {
     color: #56372C;
     text-decoration: none;
-    font-size: 19px;
+    font-size: 20px;
 }
 
 #navMenu a:hover {
@@ -76,7 +74,10 @@ header {
     color: #56372C;
     text-align: center;
     position: relative;
-    padding: 8px 100px 10px;
+
+    /* Keeps title and logo close together */
+    padding: 6px 100px 6px;
+
     border-bottom: 2px solid #56372C;
 }
 
@@ -96,7 +97,7 @@ header h1 {
 header p {
     color: #56372C;
     font-size: 16px;
-    margin: 4px 0 3px;
+    margin: 3px 0 0;
 }
 
 
@@ -104,10 +105,9 @@ header p {
 
 .headerGuyRight {
     position: absolute;
-    right: 10px;
+    right: 5px;
     bottom: -2px;
     width: 125px;
-    max-width: 15vw;
     height: auto;
     z-index: 3;
 }
@@ -121,18 +121,18 @@ header p {
     width: 100%;
     background: #F5F0E6;
     text-align: center;
-    padding: 0 0 6px;
+    padding: 0 0 5px;
 }
 
 .logoArea img {
-    width: 125px;
+    width: 120px;
     max-width: 35%;
     height: auto;
 }
 
 
 /* =========================
-   MAIN CONTENT
+   MAIN
 ========================= */
 
 main {
@@ -151,7 +151,9 @@ section {
 }
 
 
-/* HEADINGS */
+/* =========================
+   TEXT
+========================= */
 
 h2 {
     color: #F5F0E6;
@@ -160,20 +162,16 @@ h2 {
     margin: 0 0 18px;
 }
 
-
-/* TEXT */
-
 p {
     color: #F5F0E6;
     font-size: 17px;
     line-height: 1.5;
-    margin-top: 0;
-    margin-bottom: 14px;
+    margin: 0 0 14px;
 }
 
 
 /* =========================
-   HOME
+   HOME PAGE
 ========================= */
 
 .homeContent {
@@ -194,7 +192,7 @@ p {
 
 .homeImage img {
     width: 100%;
-    max-width: 360px;
+    max-width: 350px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -213,20 +211,20 @@ p {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
+    gap: 35px;
     margin-top: 25px;
 }
 
 .drink {
     width: 45%;
-    max-width: 330px;
+    max-width: 320px;
     text-align: center;
 }
 
 .drinkImage {
-    width: 100%;
-    max-width: 240px;
+    width: 240px;
     height: 240px;
+    max-width: 100%;
     object-fit: contain;
     display: block;
     margin: 0 auto 12px;
@@ -238,7 +236,7 @@ p {
 
 
 /* =========================
-   ABOUT
+   ABOUT PAGE
 ========================= */
 
 .aboutContent {
@@ -257,9 +255,9 @@ p {
     text-align: center;
 }
 
-.aboutImage img {
-    width: 100%;
-    max-width: 300px;
+.aboutGuy {
+    width: 180px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -267,7 +265,7 @@ p {
 
 
 /* =========================
-   CONTACT
+   CONTACT PAGE
 ========================= */
 
 .contactContent {
@@ -295,7 +293,9 @@ p {
 }
 
 
-/* CONTACT FORM */
+/* =========================
+   CONTACT FORM
+========================= */
 
 #contactForm {
     width: 100%;
@@ -333,13 +333,9 @@ p {
     cursor: pointer;
 }
 
-#response {
-    margin-top: 12px;
-}
-
 
 /* =========================
-   BOTTOM HEADER
+   BOTTOM
 ========================= */
 
 .bottomHeader {
@@ -369,12 +365,10 @@ p {
 
 @media screen and (max-width: 768px) {
 
-    nav {
-        padding: 8px;
-    }
+    /* NAV */
 
     #menuButton {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     #navMenu {
@@ -389,24 +383,27 @@ p {
     }
 
     #navMenu a {
-        font-size: 18px;
         display: block;
+        font-size: 19px;
     }
 
 
     /* HEADER */
 
     header {
-        padding: 8px 70px 8px;
+        padding: 6px 75px 6px;
+    }
+
+    header h1 {
+        font-size: 42px;
     }
 
     header p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .headerGuyRight {
         width: 85px;
-        max-width: none;
         right: 0;
         bottom: -2px;
     }
@@ -419,12 +416,11 @@ p {
     }
 
     .logoArea img {
-        width: 110px;
-        max-width: 40%;
+        width: 105px;
     }
 
 
-    /* GENERAL */
+    /* CONTENT */
 
     section {
         padding: 30px 16px;
@@ -467,8 +463,8 @@ p {
     }
 
     .drinkImage {
-        max-width: 200px;
-        height: 200px;
+        width: 210px;
+        height: 210px;
     }
 
 
@@ -488,6 +484,10 @@ p {
         margin-top: 20px;
     }
 
+    .aboutGuy {
+        width: 170px;
+    }
+
 
     /* CONTACT */
 
@@ -503,6 +503,10 @@ p {
     .contactImage {
         width: 100%;
         margin-top: 25px;
+    }
+
+    .contactImage img {
+        max-width: 280px;
     }
 
     #contactForm {
@@ -526,7 +530,7 @@ p {
     }
 
 
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
         width: 100%;
@@ -534,22 +538,27 @@ p {
 
     #menuButton {
         font-size: 17px;
-        padding: 7px 16px;
+        padding: 7px 17px;
+    }
+
+    #navMenu a {
+        font-size: 18px;
     }
 
 
     /* HEADER */
 
     header {
-        padding: 7px 50px 8px;
+        width: 100%;
+        padding: 5px 50px 6px;
     }
 
     header h1 {
-        font-size: 36px;
+        font-size: 35px;
     }
 
     header p {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .headerGuyRight {
@@ -563,6 +572,7 @@ p {
 
     .logoArea img {
         width: 95px;
+        max-width: 40%;
     }
 
 
@@ -590,6 +600,11 @@ p {
         margin-bottom: 20px;
     }
 
+    .homeText p {
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
     .homeImage img {
         width: 100%;
         max-width: 270px;
@@ -600,19 +615,21 @@ p {
 
     .drinkRow {
         display: block;
+        width: 100%;
         margin-top: 15px;
     }
 
     .drink {
         width: 100%;
         max-width: 100%;
-        margin: 0 auto 25px;
+        margin: 0 auto 28px;
     }
 
     .drinkImage {
-        width: 100%;
-        max-width: 190px;
+        width: 190px;
         height: 190px;
+        max-width: 190px;
+        object-fit: contain;
     }
 
 
@@ -622,8 +639,19 @@ p {
         width: 100%;
     }
 
-    .aboutImage img {
-        max-width: 250px;
+    .aboutText p {
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .aboutImage {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .aboutGuy {
+        width: 150px;
+        max-width: 70%;
     }
 
 
@@ -668,8 +696,8 @@ p {
 @media screen and (max-width: 400px) {
 
     header {
-        padding-left: 38px;
-        padding-right: 38px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
     header h1 {
@@ -702,8 +730,13 @@ p {
     }
 
     .drinkImage {
-        max-width: 170px;
+        width: 170px;
         height: 170px;
+        max-width: 170px;
+    }
+
+    .aboutGuy {
+        width: 135px;
     }
 
 }
