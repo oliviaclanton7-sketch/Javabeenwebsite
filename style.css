@@ -1,3 +1,7 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
 * {
     box-sizing: border-box;
 }
@@ -12,80 +16,93 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background: #B8A58A;
     color: #56372C;
+    font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
     width: 100%;
+    height: 150px;
     background: #F5F0E6;
-    text-align: center;
     position: relative;
-    padding: 15px 170px 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.headerText {
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
     color: #56372C;
-    font-size: 64px;
+    font-size: 58px;
     margin: 0;
+    line-height: 1.1;
     font-weight: bold;
 }
 
 header p {
     color: #56372C;
-    font-size: 18px;
-    margin: 3px 0;
+    font-size: 17px;
+    margin: 5px 0 0;
 }
 
 
 /* HEADER PEOPLE */
 
-.headerGuyLeft,
-.headerGuyRight {
+.headerGuyLeft {
     position: absolute;
+    left: 10px;
     bottom: 0;
-    width: 135px;
+    width: 125px;
     height: auto;
 }
 
-.headerGuyLeft {
-    left: 15px;
-}
-
 .headerGuyRight {
-    right: 15px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    width: 125px;
+    height: auto;
 }
 
 
-/* LOGO */
+/* =========================
+   LOGO
+========================= */
 
 .logoArea {
     width: 100%;
     background: #F5F0E6;
     text-align: center;
-    padding: 2px 0 8px;
+    padding: 5px 0 8px;
 }
 
 .logoArea img {
-    width: 155px;
-    max-width: 40%;
+    width: 140px;
+    max-width: 80%;
     height: auto;
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     width: 100%;
     background: #F5F0E6;
     border: 2px solid #56372C;
-    text-align: center;
     padding: 10px;
+    text-align: center;
 }
 
 #menuButton {
@@ -99,12 +116,12 @@ nav {
 #navMenu {
     list-style: none;
     padding: 0;
-    margin: 8px 0 0;
+    margin: 10px 0 0;
 }
 
 #navMenu li {
     display: inline-block;
-    margin: 0 14px;
+    margin: 0 12px;
 }
 
 #navMenu a {
@@ -114,92 +131,58 @@ nav {
 }
 
 
-/* MAIN CONTENT */
+/* =========================
+   HOME CONTENT
+========================= */
 
-main {
+.homeSection {
     width: 100%;
+    padding: 45px 20px;
 }
 
-section {
+.homeContent {
     width: 100%;
-    padding: 45px 25px;
-}
-
-.content {
-    max-width: 1000px;
+    max-width: 950px;
     margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
 }
 
-h2 {
+.homeText {
+    width: 50%;
+}
+
+.homeText h2 {
     color: #56372C;
     font-size: 36px;
-    margin: 0 0 20px;
+    margin: 0 0 18px;
 }
 
-p {
+.homeText p {
     color: #56372C;
     font-size: 17px;
     line-height: 1.5;
+    margin: 0;
 }
 
-
-/* IMAGES */
-
-.pageImage {
-    display: block;
-    width: 400px;
-    max-width: 100%;
-    height: auto;
-    margin: 15px auto;
-}
-
-.drinkImage {
-    display: block;
-    width: 280px;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
-}
-
-
-/* DRINKS */
-
-.drink {
+.homeImage {
+    width: 50%;
     text-align: center;
-    padding: 10px;
 }
 
-
-/* CONTACT FORM */
-
-#contactForm {
+.homeImage img {
     width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-#contactForm input,
-#contactForm textarea {
-    width: 100%;
-    padding: 9px;
-    margin: 5px 0 15px;
-    border: 1px solid #56372C;
-    background: #F5F0E6;
-}
-
-#contactForm textarea {
-    height: 110px;
-}
-
-#contactForm button {
-    background: #56372C;
-    color: white;
-    border: none;
-    padding: 9px 18px;
+    max-width: 400px;
+    height: auto;
 }
 
 
-/* BOTTOM */
+/* =========================
+   BOTTOM HEADER
+========================= */
 
 .bottomHeader {
     width: 100%;
@@ -210,24 +193,27 @@ p {
 }
 
 .bottomHeader h2 {
-    font-size: 19px;
-    margin: 0;
+    color: #56372C;
+    font-size: 20px;
+    margin: 0 0 4px;
 }
 
 .bottomHeader img {
-    width: 60px;
+    width: 65px;
     height: auto;
 }
 
 
-/* ========================= */
-/* PHONE */
-/* ========================= */
+/* =========================
+   PHONE
+========================= */
 
 @media screen and (max-width: 768px) {
 
+
     body {
         width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
@@ -236,55 +222,53 @@ p {
 
     header {
         width: 100%;
-        min-height: 125px;
-        padding: 12px 70px 8px;
+        height: 115px;
+        padding: 12px 55px 8px;
     }
 
     header h1 {
-        font-size: 38px;
-        line-height: 1.1;
+        font-size: 34px;
     }
 
     header p {
-        font-size: 13px;
-        margin-top: 5px;
+        font-size: 12px;
+        margin-top: 4px;
     }
 
 
-    /* PEOPLE */
+    /* HEADER PEOPLE */
 
-    .headerGuyLeft,
-    .headerGuyRight {
-        width: 70px;
+    .headerGuyLeft {
+        width: 60px;
+        left: 0;
         bottom: 0;
     }
 
-    .headerGuyLeft {
-        left: 0;
-    }
-
     .headerGuyRight {
+        width: 60px;
         right: 0;
+        bottom: 0;
     }
 
 
     /* LOGO */
 
     .logoArea {
-        padding: 6px 0;
+        width: 100%;
+        padding: 5px 0;
     }
 
     .logoArea img {
-        width: 115px;
+        width: 100px;
         max-width: 45%;
     }
 
 
-    /* NAV */
+    /* NAVIGATION */
 
     nav {
-        padding: 8px;
         width: 100%;
+        padding: 8px;
     }
 
     #menuButton {
@@ -299,6 +283,7 @@ p {
 
     #navMenu li {
         display: block;
+        width: 100%;
         margin: 0;
         padding: 7px 0;
         border-top: 1px solid #B8A58A;
@@ -306,78 +291,51 @@ p {
 
     #navMenu a {
         display: block;
+        width: 100%;
         font-size: 16px;
     }
 
 
-    /* CONTENT */
+    /* HOME */
 
-    section {
+    .homeSection {
         width: 100%;
-        padding: 28px 16px;
+        padding: 28px 15px;
     }
 
-    .content {
+    .homeContent {
         width: 100%;
-        max-width: 100%;
+        display: block;
         margin: 0;
     }
 
-    h2 {
-        font-size: 28px;
-        line-height: 1.2;
-        margin-bottom: 15px;
+    .homeText {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
     }
 
-    p {
+    .homeText h2 {
+        font-size: 28px;
+        margin-bottom: 14px;
+    }
+
+    .homeText p {
+        width: 100%;
         font-size: 16px;
         line-height: 1.5;
-        margin-bottom: 12px;
+        margin: 0;
     }
 
-
-    /* BOOTSTRAP COLUMNS */
-
-    .row {
+    .homeImage {
         width: 100%;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        text-align: center;
     }
 
-    .row > * {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-
-    /* IMAGES */
-
-    .pageImage {
+    .homeImage img {
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
         height: auto;
-        margin: 18px auto;
-    }
-
-    .drinkImage {
-        width: 100%;
-        max-width: 260px;
-        height: auto;
-        margin: 10px auto;
-    }
-
-    .drink {
-        width: 100%;
-        padding: 8px 0 20px;
-    }
-
-
-    /* CONTACT */
-
-    #contactForm {
-        width: 100%;
-        max-width: 100%;
-        margin: 15px auto;
     }
 
 
@@ -399,50 +357,56 @@ p {
 }
 
 
-/* VERY SMALL PHONES */
+/* =========================
+   SMALL PHONE
+========================= */
 
 @media screen and (max-width: 480px) {
 
+
     header {
-        min-height: 115px;
-        padding: 10px 55px 7px;
+        height: 105px;
+        padding: 10px 45px 7px;
     }
 
     header h1 {
-        font-size: 31px;
+        font-size: 29px;
     }
 
     header p {
-        font-size: 11px;
+        font-size: 10px;
     }
+
 
     .headerGuyLeft,
     .headerGuyRight {
-        width: 58px;
+        width: 50px;
     }
+
 
     .logoArea img {
-        width: 100px;
+        width: 90px;
     }
 
-    section {
-        padding: 24px 14px;
+
+    .homeSection {
+        padding: 24px 12px;
     }
 
-    h2 {
-        font-size: 26px;
+
+    .homeText h2 {
+        font-size: 25px;
     }
 
-    p {
+
+    .homeText p {
         font-size: 15px;
+        line-height: 1.45;
     }
 
-    .pageImage {
-        max-width: 280px;
-    }
 
-    .drinkImage {
-        max-width: 230px;
+    .homeImage img {
+        max-width: 260px;
     }
 
 }
