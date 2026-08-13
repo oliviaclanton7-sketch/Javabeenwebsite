@@ -9,19 +9,20 @@
 
 <style>
 
-html,
-body{
-    width:100%;
-    min-height:100%;
+*{
+    box-sizing:border-box;
+}
+
+html, body{
     margin:0;
     padding:0;
+    width:100%;
 }
 
 body{
-    font-family:Hinde, regular;
+    font-family:Hinde, Arial, sans-serif;
     background:#B8A58A;
     color:#56372C;
-    overflow-x:hidden;
 }
 
 
@@ -29,38 +30,39 @@ body{
 
 header{
     background:#F5F0E6;
-    padding:12px 0 0 0;
-    position:relative;
-    min-height:220px;
     text-align:center;
+    position:relative;
+    padding:12px 0 0 0;
 }
 
 header h1{
-    margin:0;
     color:#56372C;
-    font-size:76px;
+    font-size:72px;
+    margin:0;
     font-weight:bold;
-    letter-spacing:2px;
 }
 
 header p{
-    margin:2px 0 0 0;
     color:#56372C;
-    font-size:21px;
+    font-size:20px;
+    margin:0 0 8px 0;
 }
+
+
+/* HEADER PEOPLE */
 
 .headerGuyLeft{
     position:absolute;
-    left:20px;
+    left:15px;
     bottom:0;
-    width:175px;
+    width:160px;
 }
 
 .headerGuyRight{
     position:absolute;
-    right:20px;
+    right:15px;
     bottom:0;
-    width:175px;
+    width:160px;
 }
 
 
@@ -68,14 +70,13 @@ header p{
 
 .logoArea{
     background:#F5F0E6;
+    text-align:center;
     padding:0 0 8px 0;
 }
 
 .logoArea img{
-    width:190px;
-    max-width:60%;
-    display:block;
-    margin:auto;
+    width:180px;
+    max-width:50%;
 }
 
 
@@ -84,18 +85,26 @@ header p{
 nav{
     background:#F5F0E6;
     border:2px solid #56372C;
-    padding:14px;
+    text-align:center;
+    padding:12px;
+}
+
+#menuButton{
+    background:#F5F0E6;
+    color:#56372C;
+    border:1px solid #56372C;
+    padding:7px 16px;
 }
 
 #navMenu{
     list-style:none;
     padding:0;
-    margin:0;
+    margin:10px 0 0 0;
 }
 
 #navMenu li{
     display:inline;
-    margin:20px;
+    margin:0 16px;
 }
 
 #navMenu a{
@@ -104,45 +113,38 @@ nav{
     font-size:17px;
 }
 
-#menuButton{
-    background:#F5F0E6;
-    color:#56372C;
-    border:1px solid #56372C;
-    padding:8px 16px;
-}
 
-
-/* CONTENT */
+/* PAGE */
 
 section{
-    padding:64px 24px;
+    padding:45px 20px;
     text-align:center;
 }
 
 h2{
     color:#56372C;
-    font-size:38px;
-    margin-bottom:40px;
+    font-size:36px;
+    margin-bottom:28px;
 }
 
 p{
     color:#56372C;
-    line-height:1.6;
+    line-height:1.5;
 }
 
 
-/* DRINK IMAGES */
+/* DRINKS */
+
+.drink{
+    padding:12px;
+}
 
 .drinkImage{
+    display:block;
     width:300px;
     max-width:100%;
     height:auto;
-    display:block;
-    margin:0 auto 16px auto;
-}
-
-.drink{
-    padding:16px;
+    margin:0 auto 12px auto;
 }
 
 
@@ -151,54 +153,43 @@ p{
 .bottomHeader{
     background:#F5F0E6;
     border-top:2px solid #56372C;
-    padding:16px 0 12px 0;
     text-align:center;
+    padding:12px 0;
 }
 
 .bottomHeader h2{
-    margin:0 0 3px 0;
     font-size:20px;
+    margin:0;
 }
 
 .bottomHeader img{
-    width:85px;
-    max-width:50%;
+    width:70px;
 }
 
 
 /* MOBILE */
 
-@media (max-width:768px){
-
-    body{
-        width:100%;
-        overflow-x:hidden;
-    }
+@media screen and (max-width:768px){
 
     header{
-        min-height:150px;
-        height:auto;
-        padding:10px 10px 0 10px;
+        padding-top:8px;
     }
 
     header h1{
-        font-size:44px;
-        margin:0;
+        font-size:42px;
         position:relative;
         z-index:2;
     }
 
     header p{
-        font-size:16px;
-        margin:4px 0 8px 0;
+        font-size:15px;
         position:relative;
         z-index:2;
     }
 
     .headerGuyLeft,
     .headerGuyRight{
-        width:95px;
-        bottom:0;
+        width:90px;
     }
 
     .headerGuyLeft{
@@ -210,26 +201,26 @@ p{
     }
 
     .logoArea{
-        padding:4px 0 8px 0;
+        padding:5px 0 8px 0;
     }
 
     .logoArea img{
-        width:130px;
+        width:125px;
         max-width:45%;
     }
 
     nav{
-        padding:10px;
+        padding:8px;
     }
 
     #navMenu{
         display:none;
-        margin-top:8px;
+        margin:8px 0 0 0;
     }
 
     #navMenu li{
         display:block;
-        margin:8px 0;
+        margin:7px 0;
     }
 
     #navMenu a{
@@ -237,32 +228,26 @@ p{
     }
 
     section{
-        padding:32px 18px;
+        padding:28px 16px;
     }
 
     h2{
         font-size:30px;
-        margin-bottom:20px;
+        margin-bottom:18px;
     }
 
-    p{
-        font-size:16px;
-        line-height:1.5;
+    .drink{
+        padding:8px;
+        margin-bottom:18px;
     }
 
     .drinkImage{
         width:100%;
-        max-width:300px;
-        height:auto;
-    }
-
-    .drink{
-        padding:10px;
-        margin-bottom:20px;
+        max-width:280px;
     }
 
     .bottomHeader{
-        padding:12px 0 10px 0;
+        padding:10px 0;
     }
 
     .bottomHeader h2{
@@ -270,7 +255,7 @@ p{
     }
 
     .bottomHeader img{
-        width:70px;
+        width:60px;
     }
 
 }
@@ -278,27 +263,27 @@ p{
 
 /* SMALL PHONES */
 
-@media (max-width:480px){
+@media screen and (max-width:480px){
 
     header h1{
-        font-size:38px;
+        font-size:36px;
     }
 
     header p{
-        font-size:15px;
+        font-size:14px;
     }
 
     .headerGuyLeft,
     .headerGuyRight{
-        width:85px;
+        width:78px;
     }
 
-    .logoArea img{
-        width:130px;
+    section{
+        padding:24px 14px;
     }
 
-    .drinkImage{
-        max-width:270px;
+    h2{
+        font-size:27px;
     }
 
 }
@@ -333,8 +318,6 @@ p{
 
 <nav>
 
-<div class="container-fluid text-center">
-
 <button id="menuButton">☰ Menu</button>
 
 <ul id="navMenu">
@@ -348,8 +331,6 @@ p{
 <li><a href="contact.html">Contact</a></li>
 
 </ul>
-
-</div>
 
 </nav>
 
