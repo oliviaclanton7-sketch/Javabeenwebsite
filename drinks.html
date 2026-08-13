@@ -17,25 +17,7 @@
 <body>
 
 
-<header>
-
-<img src="header guy.png" class="headerGuyLeft" alt="Java Been character">
-
-<img src="header guy.png" class="headerGuyRight" alt="Java Been character">
-
-<h1>JAVA BEEN</h1>
-
-<p>Coffee Community Creativity</p>
-
-</header>
-
-
-<div class="logoArea">
-
-<img src="logo java.png" alt="Java Been Logo">
-
-</div>
-
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -56,17 +38,47 @@
 </nav>
 
 
+<!-- HEADER -->
+
+<header>
+
+<img src="header guy.png" class="headerGuyRight" alt="Java Been character">
+
+<div class="headerText">
+
+<h1>JAVA BEEN</h1>
+
+<p>Coffee Community Creativity</p>
+
+</div>
+
+</header>
+
+
+<!-- LOGO -->
+
+<div class="logoArea">
+
+<img src="logo java.png" alt="Java Been Logo">
+
+</div>
+
+
+<!-- DRINKS -->
+
 <main>
 
 <section>
 
-<div class="content">
+<div class="content drinksContent">
 
 <h2>Featured Drinks</h2>
 
-<div class="row justify-content-center">
 
-<div class="col-md-6 drink">
+<div class="drinkRow">
+
+
+<div class="drink">
 
 <img src="matcha.png" class="drinkImage" alt="Java Been Signature Matcha">
 
@@ -75,13 +87,14 @@
 </div>
 
 
-<div class="col-md-6 drink">
+<div class="drink">
 
 <img src="latte.png" class="drinkImage" alt="Java Been Classic Latte">
 
 <p>Java Been Classic Latte</p>
 
 </div>
+
 
 </div>
 
@@ -92,6 +105,8 @@
 </main>
 
 
+<!-- BOTTOM -->
+
 <div class="bottomHeader">
 
 <h2>JAVA BEEN</h2>
@@ -101,17 +116,19 @@
 </div>
 
 
+<!-- JQUERY -->
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <script>
 
 $(document).ready(function(){
 
-    $("#menuButton").click(function(){
+$("#menuButton").click(function(){
 
-        $("#navMenu").slideToggle();
+$("#navMenu").slideToggle();
 
-    });
+});
 
 });
 
